@@ -70,7 +70,9 @@ export const Header = () => {
               >
                 <Image src="/logo.png" alt="logo" width={40} height={40} />
 
-                {/* <span className="text-2xl font-bold">Berk C</span> */}
+                <span className="text-2xl font-bold text-primary">
+                  Berk Certel
+                </span>
               </Link>
 
               <div className="flex items-center gap-4">

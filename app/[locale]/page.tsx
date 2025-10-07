@@ -2,6 +2,7 @@ import DarkVeil from "@/components/background/DarkVeil";
 // import CallToAction from "@/components/call-to-action";
 import Hero from "@/components/home/Hero";
 import IcodeWith from "@/components/home/IcodeWith";
+import ScrollArrow from "@/components/home/ScrollArrow";
 import PageProvider from "@/components/providers/PageProvider";
 import { Timeline } from "@/components/ui/timeline";
 import { timelineData } from "@/constant/timelineData";
@@ -23,6 +24,7 @@ export default function Home() {
           <PageProvider>
             <Hero />
           </PageProvider>
+          <ScrollArrow />
         </div>
       </div>
       <PageProvider>

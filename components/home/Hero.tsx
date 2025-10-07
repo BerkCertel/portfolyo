@@ -46,7 +46,7 @@ export default function Hero() {
     <PageProvider>
       <section
         id="home"
-        className="min-h-screen pt-20  flex flex-col md:flex-row items-center md:justify- between  justify-center gap-2 "
+        className="min-h-screen md:pt-20  flex flex-col md:flex-row items-center md:justify- between  justify-center gap-2 "
       >
         {/* Content  */}
         <div className="text-center text-white w-full md:w-1/2">

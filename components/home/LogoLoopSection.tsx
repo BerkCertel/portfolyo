@@ -1,5 +1,6 @@
 "use client";
 
+import Marquee from "react-fast-marquee";
 import {
   SiReact,
   SiNextdotjs,
@@ -19,49 +20,23 @@ import {
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-import LogoLoop from "../LogoLoop";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-
-// Alternative with image sources
-// const imageLogos = [
-//   {
-//     src: "/better-auth-logo.png",
-//     alt: "Company 1",
-//     href: "https://company1.com",
-//   },
-// ];
 
 export default function LogoLoopSection() {
   const theme = useTheme();
 
   const techLogos = [
     { node: <SiHtml5 />, title: "HTML5" },
-
     { node: <SiCss3 />, title: "CSS3" },
     { node: <SiJavascript />, title: "JavaScript" },
-    {
-      node: <SiTypescript />,
-      title: "TypeScript",
-    },
+    { node: <SiTypescript />, title: "TypeScript" },
     { node: <SiReact />, title: "React" },
     { node: <SiNextdotjs />, title: "Next.js" },
-    {
-      node: <SiTailwindcss />,
-      title: "Tailwind CSS",
-    },
-    {
-      node: <SiDrizzle />,
-      title: "Drizzle",
-    },
-    {
-      node: <SiPrisma />,
-      title: "Prisma",
-    },
-    {
-      node: <SiMongodb />,
-      title: "MongoDB",
-    },
+    { node: <SiTailwindcss />, title: "Tailwind CSS" },
+    { node: <SiDrizzle />, title: "Drizzle" },
+    { node: <SiPrisma />, title: "Prisma" },
+    { node: <SiMongodb />, title: "MongoDB" },
     { node: <FaNode />, title: "Node.js" },
     { node: <SiExpress />, title: "Express.js" },
     { node: <SiJsonwebtokens />, title: "JWT" },
@@ -77,30 +52,22 @@ export default function LogoLoopSection() {
               ? "/better-auth-logo.png"
               : "/better-auth-logo-light.png"
           }
-          alt="PostgreSQL"
-          height={80}
-          width={80}
-          className="bg-none"
+          alt="Better Auth"
+          height={40}
+          width={40}
         />
       ),
-      title: "PostgreSQL",
+      title: "Better Auth",
     },
   ];
 
   return (
-    <div className="overflow-hidden h-[200px] relative flex flex-col items-center justify-center gap-5 ">
-      <LogoLoop
-        logos={techLogos}
-        speed={70}
-        direction="left"
-        logoHeight={34}
-        gap={40}
-        pauseOnHover
-        scaleOnHover
-        fadeOut
-        fadeOutColor={theme?.theme == "dark" ? "#000000" : "#ffffff"}
-        ariaLabel="Technology partners"
-      />
-    </div>
+    <Marquee gradient={false} speed={40} className="py-8">
+      {techLogos.map((logo, idx) => (
+        <div key={idx} className="mx-8 flex items-center justify-center">
+          <div className="text-black dark:text-white text-5xl">{logo.node}</div>
+        </div>
+      ))}
+    </Marquee>
   );
 }

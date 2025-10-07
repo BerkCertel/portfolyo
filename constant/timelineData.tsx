@@ -1,4 +1,6 @@
 "use client";
+import SplitText from "@/components/SplitText";
+import React from "react";
 
 interface TimelineEntry {
   title: string;
@@ -12,13 +14,20 @@ export const timelineData: TimelineEntry[] = [
     title: "İhtiyaç Analizi & Planlama",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          Proje başlamadan önce müşteri/ekip ile detaylı bir görüşme yaparım ve{" "}
-          <strong>proje gereksinimlerini</strong> netleştiririm. Kullanıcı
-          hikayeleri, hedefler ve öncelikler belirlenir.{" "}
-          <strong>Trello, Notion</strong> gibi araçlarla iş planı ve yol
-          haritası çıkarılır.
-        </p>
+        <SplitText
+          text="Proje başlamadan önce müşteri/ekip ile detaylı bir görüşme yaparım ve proje gereksinimlerini netleştiririm. Kullanıcı hikayeleri, hedefler ve öncelikler belirlenir. Trello, Notion gibi araçlarla iş planı ve yol haritası çıkarılır."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -27,12 +36,20 @@ export const timelineData: TimelineEntry[] = [
     title: "Tasarım & Mockup",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          Arayüz için <strong>Wireframe</strong> ve <strong>Mockup</strong>{" "}
-          hazırlanır. Eğer varsa UI/UX ekibiyle iş birliği yapılır, yoksa{" "}
-          <strong>Figma</strong> ile temel tasarımı kendim oluştururum. Renk
-          paleti, tipografi ve component yapısı belirlenir.
-        </p>
+        <SplitText
+          text="Arayüz için Wireframe ve Mockup hazırlanır. Eğer varsa UI/UX ekibiyle iş birliği yapılır, yoksa Figma ile temel tasarımı kendim oluştururum. Renk paleti, tipografi ve component yapısı belirlenir."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -41,14 +58,20 @@ export const timelineData: TimelineEntry[] = [
     title: "Frontend Kurulumu",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          Projenin ilk adımında <strong>React</strong> veya{" "}
-          <strong>Next.js</strong> kurulumu yapılır.{" "}
-          <strong>Tailwind CSS</strong> ile hızlı arayüz geliştirme başlar.
-          Component yapısı ve sayfa mimarisi planlanır. UI kütüphaneleri (
-          <strong>shadcn/ui</strong>, <strong>PrimeReact</strong>) entegre
-          edilir.
-        </p>
+        <SplitText
+          text="Projenin ilk adımında React veya Next.js kurulumu yapılır. Tailwind CSS ile hızlı arayüz geliştirme başlar. Component yapısı ve sayfa mimarisi planlanır. UI kütüphaneleri (shadcn/ui, PrimeReact) entegre edilir."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -57,12 +80,20 @@ export const timelineData: TimelineEntry[] = [
     title: "Backend Kurulumu",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          Sunucu tarafı için <strong>Node.js</strong> ve{" "}
-          <strong>Express.js</strong> yapılandırılır. API endpointleri,
-          middleware ve hata yönetimi kurulur. Gerekirse{" "}
-          <strong>TypeScript</strong> ile tip desteği eklenir.
-        </p>
+        <SplitText
+          text="Sunucu tarafı için Node.js ve Express.js yapılandırılır. API endpointleri, middleware ve hata yönetimi kurulur. Gerekirse TypeScript ile tip desteği eklenir."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -71,12 +102,20 @@ export const timelineData: TimelineEntry[] = [
     title: "Veritabanı & ORM Entegrasyonu",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          <strong>MongoDB</strong> veya <strong>PostgreSQL</strong> seçilerek
-          veri modeli tasarlanır. <strong>Prisma</strong> veya{" "}
-          <strong>Drizzle ORM</strong> ile veritabanı bağlantısı kurulur.
-          Migration ve seed işlemleri yapılır, veri ilişkileri modellenir.
-        </p>
+        <SplitText
+          text="MongoDB veya PostgreSQL seçilerek veri modeli tasarlanır. Prisma veya Drizzle ORM ile veritabanı bağlantısı kurulur. Migration ve seed işlemleri yapılır, veri ilişkileri modellenir."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -85,12 +124,20 @@ export const timelineData: TimelineEntry[] = [
     title: "Kimlik Doğrulama & Güvenlik",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          Kullanıcı yönetimi için <strong>JWT</strong>, <strong>Clerk</strong>{" "}
-          veya <strong>Better Auth</strong> gibi kimlik doğrulama sistemleri
-          entegre edilir. Yetkilendirme, şifreleme ve güvenli oturum yönetimi
-          sağlanır.
-        </p>
+        <SplitText
+          text="Kullanıcı yönetimi için JWT, Clerk veya Better Auth gibi kimlik doğrulama sistemleri entegre edilir. Yetkilendirme, şifreleme ve güvenli oturum yönetimi sağlanır."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -99,11 +146,20 @@ export const timelineData: TimelineEntry[] = [
     title: "State & Veri Yönetimi",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          <strong>Redux</strong> veya context API ile global state yönetimi
-          oluşturulur. API çağrıları, veri önbellekleme ve asenkron işlemler
-          için uygun yapılar kurulur.
-        </p>
+        <SplitText
+          text="Redux veya context API ile global state yönetimi oluşturulur. API çağrıları, veri önbellekleme ve asenkron işlemler için uygun yapılar kurulur."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -112,11 +168,20 @@ export const timelineData: TimelineEntry[] = [
     title: "Test & Kalite Kontrol",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          <strong>Jest</strong>, <strong>React Testing Library</strong> gibi
-          araçlarla birim ve entegrasyon testleri yazılır. Manuel ve otomatik
-          testlerle uygulamanın kararlılığı ve güvenliği kontrol edilir.
-        </p>
+        <SplitText
+          text="Jest, React Testing Library gibi araçlarla birim ve entegrasyon testleri yazılır. Manuel ve otomatik testlerle uygulamanın kararlılığı ve güvenliği kontrol edilir."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -125,12 +190,20 @@ export const timelineData: TimelineEntry[] = [
     title: "Deploy & Sürümleme",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          Proje tamamlandığında <strong>Vercel</strong>,{" "}
-          <strong>Netlify</strong> veya kendi sunucuma deployment yaparım. Sürüm
-          yönetimi için <strong>Git</strong> ve <strong>GitHub</strong>{" "}
-          kullanılır, CI/CD süreçleri varsa entegre edilir.
-        </p>
+        <SplitText
+          text="Proje tamamlandığında Vercel, Netlify veya kendi sunucuma deployment yaparım. Sürüm yönetimi için Git ve GitHub kullanılır, CI/CD süreçleri varsa entegre edilir."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },
@@ -139,11 +212,20 @@ export const timelineData: TimelineEntry[] = [
     title: "Dökümantasyon & Teslim",
     content: (
       <div className="text-xs md:text-sm max-w-2xl">
-        <p>
-          Son aşamada proje için <strong>README</strong>, API dökümantasyonu,
-          kullanım kılavuzları hazırlanır. Müşteriye/ekibe teslim edilir ve geri
-          bildirim aşaması başlatılır.
-        </p>
+        <SplitText
+          text="Son aşamada proje için README, API dökümantasyonu, kullanım kılavuzları hazırlanır. Müşteriye/ekibe teslim edilir ve geri bildirim aşaması başlatılır."
+          className="mb-2"
+          tag="p"
+          splitType="chars"
+          delay={20}
+          duration={0.6}
+          ease="power3.out"
+          from={{ opacity: 0, y: 20 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="left"
+        />
       </div>
     ),
   },

@@ -171,6 +171,7 @@
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
 }
+
 /* Button styles */
 @layer base {
   button:not(:disabled) {
@@ -189,4 +190,7 @@
 
 body {
   scroll-behavior: smooth;
+  padding: 0;
+
+  margin: 0;
 }
