@@ -56,7 +56,7 @@ export const Header = () => {
       <nav
         data-state={menuState && "active"}
         className={cn(
-          "fixed z-100 top-0 right-0 left-0 w-full  transition-colors duration-150 max-w-screen",
+          "fixed z-50  w-full  transition-colors duration-150 ",
           scrolled && " backdrop-blur-xl"
         )}
       >
@@ -83,7 +83,7 @@ export const Header = () => {
                         <span className="sr-only">Change language</span>
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
+                    <DropdownMenuContent className="max-w-screen" align="end">
                       {supportedLocales.map((lang) => (
                         <DropdownMenuItem
                           key={lang.code}
@@ -111,14 +111,20 @@ export const Header = () => {
               </div>
             </div>
             <div className="hidden lg:block">
-              <ul className="flex  gap-8 text-sm">
+              <ul className="flex gap-8 text-sm">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                      className={cn(
+                        "relative block py-2 font-medium transition-all duration-300",
+                        "text-primary  hover:text-primary",
+                        "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+                        "hover:scale-105",
+                        pathname === item.href && "text-primary after:w-full"
+                      )}
                     >
-                      <span>{item.name}</span>
+                      <span className="relative">{item.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -126,14 +132,19 @@ export const Header = () => {
             </div>
 
             <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-              {/* Desktop Menu items */}
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        className={cn(
+                          "relative block py-2 font-medium transition-all duration-300",
+                          "text-foreground/70 hover:text-foreground hover:translate-x-2",
+                          "before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-primary before:opacity-0 before:transition-all before:duration-300 hover:before:opacity-100 hover:before:-left-4",
+                          pathname === item.href &&
+                            "text-primary before:opacity-100 before:-left-4"
+                        )}
                       >
                         <span>{item.name}</span>
                       </Link>

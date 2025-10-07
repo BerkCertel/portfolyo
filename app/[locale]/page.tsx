@@ -9,7 +9,7 @@ import { timelineData } from "@/constant/timelineData";
 export default function Home() {
   return (
     <div>
-      <div className="w-full h-screen  relative ">
+      <div className="w-full h-screen overflow-hidden relative ">
         <DarkVeil
           hueShift={396} // 160-200 arası mavi, daha az koyu
           noiseIntensity={0.07}
@@ -19,7 +19,7 @@ export default function Home() {
           resolutionScale={1}
           speed={2}
         />
-        <div className="absolute inset-0 ">
+        <div className="absolute inset-0 overflow-hidden ">
           <PageProvider>
             <Hero />
           </PageProvider>
