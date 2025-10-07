@@ -23,8 +23,8 @@ import {
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-// import LogoLoop from "../LogoLoop";
-// import { useTheme } from "next-themes";
+import LogoLoop from "../LogoLoop";
+import { useTheme } from "next-themes";
 
 // Frontend alt başlıklarıyla sıralanmış
 const frontendFrameworks = [
@@ -160,19 +160,19 @@ const authUiTech = [
   },
 ];
 
-// // Tüm logoları logo kaydırıcı için birleştir
-// const allLogos = [
-//   ...frontendFrameworks,
-//   ...frontendUI,
-//   ...frontendState,
-//   ...frontendCore,
-//   ...backendTech,
-//   ...ormDatabaseTech,
-//   ...authUiTech,
-// ];
+// Tüm logoları logo kaydırıcı için birleştir
+const allLogos = [
+  ...frontendFrameworks,
+  ...frontendUI,
+  ...frontendState,
+  ...frontendCore,
+  ...backendTech,
+  ...ormDatabaseTech,
+  ...authUiTech,
+];
 
 export default function IcodeWith() {
-  // const theme = useTheme();
+  const theme = useTheme();
 
   return (
     <section>
@@ -190,7 +190,7 @@ export default function IcodeWith() {
             </p>
           </div>
           <div className="overflow-hidden h-[120px] relative flex flex-col items-center justify-center gap-3 mb-10">
-            {/* <LogoLoop
+            <LogoLoop
               logos={allLogos}
               speed={70}
               direction="left"
@@ -201,7 +201,7 @@ export default function IcodeWith() {
               fadeOut
               fadeOutColor={theme?.theme == "dark" ? "#000000" : "#ffffff"}
               ariaLabel="Kullandığım Teknolojiler"
-            /> */}
+            />
           </div>
           {/* Satır satır, mantıklı başlıklarla */}
           <div className="flex flex-col gap-5">
