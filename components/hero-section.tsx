@@ -17,7 +17,7 @@ const transitionVariants = {
       filter: "blur(0px)",
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         bounce: 0.3,
         duration: 1.5,
       },
@@ -77,10 +77,7 @@ export default function HeroSection() {
                   }}
                   className="mt-12 flex items-center gap-2"
                 >
-                  <div
-                    key={1}
-                    className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5"
-                  >
+                  <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
                     <Button
                       asChild
                       size="lg"
@@ -92,7 +89,6 @@ export default function HeroSection() {
                     </Button>
                   </div>
                   <Button
-                    key={2}
                     asChild
                     size="lg"
                     variant="ghost"

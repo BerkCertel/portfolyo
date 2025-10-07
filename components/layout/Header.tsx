@@ -56,7 +56,7 @@ export const Header = () => {
       <nav
         data-state={menuState && "active"}
         className={cn(
-          "fixed z-20 top-0 right-0 left-0 w-full  transition-colors duration-150 max-w-screen",
+          "fixed z-100 top-0 right-0 left-0 w-full  transition-colors duration-150 max-w-screen",
           scrolled && " backdrop-blur-xl"
         )}
       >

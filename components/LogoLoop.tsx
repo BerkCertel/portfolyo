@@ -8,23 +8,25 @@ import React, {
   useState,
 } from "react";
 
-export type LogoItem =
-  | {
-      node: React.ReactNode;
-      href?: string;
-      title?: string;
-      ariaLabel?: string;
-    }
-  | {
-      src: string;
-      alt?: string;
-      href?: string;
-      title?: string;
-      srcSet?: string;
-      sizes?: string;
-      width?: number;
-      height?: number;
-    };
+export type LogoNodeItem = {
+  node: React.ReactNode;
+  href?: string;
+  title?: string;
+  ariaLabel?: string;
+};
+
+export type LogoImgItem = {
+  src: string;
+  alt?: string;
+  href?: string;
+  title?: string;
+  srcSet?: string;
+  sizes?: string;
+  width?: number;
+  height?: number;
+};
+
+export type LogoItem = LogoNodeItem | LogoImgItem;
 
 export interface LogoLoopProps {
   logos: LogoItem[];
@@ -57,6 +59,7 @@ const cx = (...parts: Array<string | false | null | undefined>) =>
 const useResizeObserver = (
   callback: () => void,
   elements: Array<React.RefObject<Element | null>>,
+  //eslint-disable-next-line
   dependencies: React.DependencyList
 ) => {
   useEffect(() => {
@@ -69,7 +72,7 @@ const useResizeObserver = (
 
     const observers = elements.map((ref) => {
       if (!ref.current) return null;
-      const observer = new ResizeObserver(callback);
+      const observer = new window.ResizeObserver(callback);
       observer.observe(ref.current);
       return observer;
     });
@@ -79,12 +82,13 @@ const useResizeObserver = (
     return () => {
       observers.forEach((observer) => observer?.disconnect());
     };
-  }, dependencies);
+  }, [callback, elements.length, elements]);
 };
 
 const useImageLoader = (
   seqRef: React.RefObject<HTMLUListElement | null>,
   onLoad: () => void,
+  //eslint-disable-next-line
   dependencies: React.DependencyList
 ) => {
   useEffect(() => {
@@ -119,7 +123,7 @@ const useImageLoader = (
         img.removeEventListener("error", handleImageLoad);
       });
     };
-  }, dependencies);
+  }, [onLoad, seqRef]);
 };
 
 const useAnimationLoop = (
@@ -180,19 +184,19 @@ const useAnimationLoop = (
         track.style.transform = `translate3d(${translateX}px, 0, 0)`;
       }
 
-      rafRef.current = requestAnimationFrame(animate);
+      rafRef.current = window.requestAnimationFrame(animate);
     };
 
-    rafRef.current = requestAnimationFrame(animate);
+    rafRef.current = window.requestAnimationFrame(animate);
 
     return () => {
       if (rafRef.current !== null) {
-        cancelAnimationFrame(rafRef.current);
+        window.cancelAnimationFrame(rafRef.current);
         rafRef.current = null;
       }
       lastTimestampRef.current = null;
     };
-  }, [targetVelocity, seqWidth, isHovered, pauseOnHover]);
+  }, [targetVelocity, seqWidth, isHovered, pauseOnHover, trackRef]);
 };
 
 export const LogoLoop = React.memo<LogoLoopProps>(
@@ -245,10 +249,15 @@ export const LogoLoop = React.memo<LogoLoopProps>(
     useResizeObserver(
       updateDimensions,
       [containerRef, seqRef],
-      [logos, gap, logoHeight]
+      [logos, gap, logoHeight, updateDimensions]
     );
 
-    useImageLoader(seqRef, updateDimensions, [logos, gap, logoHeight]);
+    useImageLoader(seqRef, updateDimensions, [
+      logos,
+      gap,
+      logoHeight,
+      updateDimensions,
+    ]);
 
     useAnimationLoop(
       trackRef,
@@ -302,11 +311,12 @@ export const LogoLoop = React.memo<LogoLoopProps>(
               scaleOnHover &&
                 "transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-120"
             )}
-            aria-hidden={!!(item as any).href && !(item as any).ariaLabel}
+            aria-hidden={!!item.href && !item.ariaLabel}
           >
-            {(item as any).node}
+            {(item as LogoNodeItem).node}
           </span>
         ) : (
+          //eslint-disable-next-line
           <img
             className={cx(
               "h-[var(--logoloop-logoHeight)] w-auto block object-contain",
@@ -316,13 +326,13 @@ export const LogoLoop = React.memo<LogoLoopProps>(
               scaleOnHover &&
                 "transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-120"
             )}
-            src={(item as any).src}
-            srcSet={(item as any).srcSet}
-            sizes={(item as any).sizes}
-            width={(item as any).width}
-            height={(item as any).height}
-            alt={(item as any).alt ?? ""}
-            title={(item as any).title}
+            src={(item as LogoImgItem).src}
+            srcSet={(item as LogoImgItem).srcSet}
+            sizes={(item as LogoImgItem).sizes}
+            width={(item as LogoImgItem).width}
+            height={(item as LogoImgItem).height}
+            alt={(item as LogoImgItem).alt ?? ""}
+            title={(item as LogoImgItem).title}
             loading="lazy"
             decoding="async"
             draggable={false}
@@ -330,10 +340,10 @@ export const LogoLoop = React.memo<LogoLoopProps>(
         );
 
         const itemAriaLabel = isNodeItem
-          ? (item as any).ariaLabel ?? (item as any).title
-          : (item as any).alt ?? (item as any).title;
+          ? item.ariaLabel ?? item.title
+          : (item as LogoImgItem).alt ?? (item as LogoImgItem).title;
 
-        const inner = (item as any).href ? (
+        const inner = item.href ? (
           <a
             className={cx(
               "inline-flex items-center no-underline rounded",
@@ -341,7 +351,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
               "hover:opacity-80",
               "focus-visible:outline focus-visible:outline-current focus-visible:outline-offset-2"
             )}
-            href={(item as any).href}
+            href={item.href}
             aria-label={itemAriaLabel || "logo link"}
             target="_blank"
             rel="noreferrer noopener"

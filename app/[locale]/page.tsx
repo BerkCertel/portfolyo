@@ -8,23 +8,27 @@ import { timelineData } from "@/constant/timelineData";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen h-full relative ">
-      <DarkVeil
-        hueShift={396} // 160-200 arası mavi, daha az koyu
-        noiseIntensity={0.07}
-        scanlineIntensity={0.08}
-        scanlineFrequency={0.03}
-        warpAmount={0.02}
-        resolutionScale={1}
-        speed={2}
-      />
-      <div className="absolute inset-0 ">
-        <PageProvider>
-          <Hero />
-          <IcodeWith />
-          <Timeline data={timelineData} />
-        </PageProvider>
+    <div>
+      <div className="w-full h-screen  relative ">
+        <DarkVeil
+          hueShift={396} // 160-200 arası mavi, daha az koyu
+          noiseIntensity={0.07}
+          scanlineIntensity={0.08}
+          scanlineFrequency={0.03}
+          warpAmount={0.02}
+          resolutionScale={1}
+          speed={2}
+        />
+        <div className="absolute inset-0 ">
+          <PageProvider>
+            <Hero />
+          </PageProvider>
+        </div>
       </div>
+      <PageProvider>
+        <IcodeWith />
+        <Timeline data={timelineData} />
+      </PageProvider>
     </div>
   );
 }

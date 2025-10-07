@@ -1,11 +1,17 @@
-// Bir yazılım projesinde ilerleme sürecim için Timeline içerikleri
+"use client";
 
-export const timelineData = [
+interface TimelineEntry {
+  title: string;
+  content: React.ReactNode;
+  id: string;
+}
+
+export const timelineData: TimelineEntry[] = [
   {
-    id: "timeline-1",
+    id: "1",
     title: "İhtiyaç Analizi & Planlama",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           Proje başlamadan önce müşteri/ekip ile detaylı bir görüşme yaparım ve{" "}
           <strong>proje gereksinimlerini</strong> netleştiririm. Kullanıcı
@@ -17,10 +23,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-2",
+    id: "2",
     title: "Tasarım & Mockup",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           Arayüz için <strong>Wireframe</strong> ve <strong>Mockup</strong>{" "}
           hazırlanır. Eğer varsa UI/UX ekibiyle iş birliği yapılır, yoksa{" "}
@@ -31,10 +37,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-3",
+    id: "3",
     title: "Frontend Kurulumu",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           Projenin ilk adımında <strong>React</strong> veya{" "}
           <strong>Next.js</strong> kurulumu yapılır.{" "}
@@ -47,10 +53,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-4",
+    id: "4",
     title: "Backend Kurulumu",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           Sunucu tarafı için <strong>Node.js</strong> ve{" "}
           <strong>Express.js</strong> yapılandırılır. API endpointleri,
@@ -61,10 +67,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-5",
+    id: "5",
     title: "Veritabanı & ORM Entegrasyonu",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           <strong>MongoDB</strong> veya <strong>PostgreSQL</strong> seçilerek
           veri modeli tasarlanır. <strong>Prisma</strong> veya{" "}
@@ -75,10 +81,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-6",
+    id: "6",
     title: "Kimlik Doğrulama & Güvenlik",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           Kullanıcı yönetimi için <strong>JWT</strong>, <strong>Clerk</strong>{" "}
           veya <strong>Better Auth</strong> gibi kimlik doğrulama sistemleri
@@ -89,10 +95,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-7",
+    id: "7",
     title: "State & Veri Yönetimi",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           <strong>Redux</strong> veya context API ile global state yönetimi
           oluşturulur. API çağrıları, veri önbellekleme ve asenkron işlemler
@@ -102,10 +108,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-8",
+    id: "8",
     title: "Test & Kalite Kontrol",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           <strong>Jest</strong>, <strong>React Testing Library</strong> gibi
           araçlarla birim ve entegrasyon testleri yazılır. Manuel ve otomatik
@@ -115,10 +121,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-9",
+    id: "9",
     title: "Deploy & Sürümleme",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           Proje tamamlandığında <strong>Vercel</strong>,{" "}
           <strong>Netlify</strong> veya kendi sunucuma deployment yaparım. Sürüm
@@ -129,10 +135,10 @@ export const timelineData = [
     ),
   },
   {
-    id: "timeline-10",
+    id: "10",
     title: "Dökümantasyon & Teslim",
     content: (
-      <div className=" text-base max-w-2xl">
+      <div className="text-xs md:text-sm max-w-2xl">
         <p>
           Son aşamada proje için <strong>README</strong>, API dökümantasyonu,
           kullanım kılavuzları hazırlanır. Müşteriye/ekibe teslim edilir ve geri
@@ -142,3 +148,6 @@ export const timelineData = [
     ),
   },
 ];
+
+// Örnek kullanım (sayfa içinde):
+// <Timeline data={timelineData} />

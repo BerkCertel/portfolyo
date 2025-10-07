@@ -176,7 +176,7 @@ export default function IcodeWith() {
 
   return (
     <section>
-      <div className="py-20">
+      <div className="py-10 md:py-20">
         <div>
           <div className="text-center mb-10">
             <h2 className="text-balance text-3xl font-bold md:text-4xl">
@@ -191,7 +191,7 @@ export default function IcodeWith() {
           </div>
           <div className="overflow-hidden h-[120px] relative flex flex-col items-center justify-center gap-3 mb-10">
             <LogoLoop
-              logos={allLogos.map(({ node, title }) => ({ node, title }))}
+              logos={allLogos}
               speed={70}
               direction="left"
               logoHeight={34}
@@ -206,7 +206,7 @@ export default function IcodeWith() {
           {/* Satır satır, mantıklı başlıklarla */}
           <div className="flex flex-col gap-5">
             <TechSection title="Frontend">
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap md:flex-nowrap gap-2 w-full">
                 <TechSubSection
                   title="Core Web Technologies"
                   techList={frontendCore}
@@ -267,11 +267,13 @@ const TechSubSection = ({
   }>;
 }) => (
   <div>
-    {title && <h4 className="text-base font-semibold mb-2 ml-2">{title}</h4>}
+    {title && (
+      <h4 className="text-base font-semibold mb-2 ml-2 min-w-full">{title}</h4>
+    )}
     <div className="flex flex-row flex-wrap gap-2">
-      {techList.map((tech, idx) => (
+      {techList.map((tech) => (
         <TechCard
-          key={tech.title + idx}
+          key={tech.title}
           title={tech.title}
           description={tech.description}
         >
