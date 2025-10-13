@@ -2,6 +2,7 @@
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 import SplitText from "../SplitText";
+import { useTranslations } from "next-intl";
 
 interface TimelineEntry {
   title: string;
@@ -13,6 +14,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+
+  // next-intl ile çeviri
+  const t = useTranslations("TimelinePage");
 
   useEffect(() => {
     if (ref.current) {
@@ -31,13 +35,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full   bg-background font-sans overflow-clip "
+      className="w-full bg-background font-sans overflow-clip"
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto text-center px-4 md:px-8 lg:px-10">
         <SplitText
-          text="Proje Süreci"
-          className=" text-5xl md:text-7xl font-semibold text-center"
+          text={t("title")}
+          className="text-5xl md:text-7xl font-semibold text-center"
           delay={100}
           duration={0.6}
           ease="power3.out"
@@ -50,7 +54,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         />
 
         <SplitText
-          text=" Adım adım proje sürecini keşfedin."
+          text={t("subtitle")}
           className="text-lg md:text-5xl font-semibold text-center"
           delay={100}
           duration={0.6}
@@ -64,7 +68,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         />
       </div>
 
-      <div ref={ref} className="relative  pb-20">
+      <div ref={ref} className="relative pb-20">
         {data.map((item) => (
           <div
             key={item.id}

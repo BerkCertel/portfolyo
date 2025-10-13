@@ -6,19 +6,19 @@ import Image from "next/image";
 import PageProvider from "../providers/PageProvider";
 import GradientText from "../GradientText";
 import TextType from "../TextType";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
   const [currentTitle, setCurrentTitle] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
+  // Titles for animation (from i18n)
+  const titles = t.raw("titles") as string[];
+
   useEffect(() => {
-    const titles = [
-      "Software Developer",
-      "Frontend Developer",
-      "Backend Developer",
-      "Full-Stack Engineer",
-    ];
     const currentFullText = titles[currentTitle];
     const typingSpeed = isDeleting ? 50 : 100;
 
@@ -40,22 +40,21 @@ export default function Hero() {
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [displayedText, isDeleting, currentTitle]);
+  }, [displayedText, isDeleting, currentTitle, titles]);
 
   return (
     <PageProvider>
       <section
         id="home"
-        className="min-h-screen md:pt-20  flex flex-col md:flex-row items-center md:justify- between  justify-center gap-2 "
+        className="min-h-screen md:pt-20 flex flex-col md:flex-row items-center md:justify-between justify-center gap-2"
       >
         {/* Content  */}
         <div className="text-center text-white w-full md:w-1/2">
           {/* Greeting */}
-          <div className=" text-lg ">
-            <p>Merhaba, ben</p>
+          <div className="text-lg">
+            <p>{t("greeting")}</p>
           </div>
           {/* Name */}
-
           <GradientText
             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
             animationSpeed={3}
@@ -63,12 +62,12 @@ export default function Hero() {
             className="custom-class"
           >
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-heading mb-4 text-balance">
-              Berk Certel
+              {t("name")}
             </h1>
           </GradientText>
 
           {/* Animated Title */}
-          <div className=" h-16 sm:h-20 w-full">
+          <div className="h-16 sm:h-20 w-full">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-muted-foreground mb-8">
               <GradientText
                 colors={["#4079ff", "#40ffaa", "#40ffaa", "#4079ff", "#40ffaa"]}
@@ -76,18 +75,16 @@ export default function Hero() {
                 showBorder={false}
                 className="custom-class"
               >
-                {displayedText} <span className="animate-pulse">|</span>
+                {displayedText}
               </GradientText>
             </h2>
           </div>
           {/* Description */}
           <div className="hidden md:block">
             <TextType
-              text={[
-                "Yazılım geliştirme konusunda tutkulu, yenilikçi ve çözüm odaklı bir profesyonelim. Teknolojiyi kullanarak etkileyici dijital deneyimler yaratmayı seviyorum.",
-              ]}
-              typingSpeed={75}
-              pauseDuration={1500}
+              text={[t("desc")]}
+              typingSpeed={30}
+              pauseDuration={100}
               showCursor={true}
               cursorCharacter="|"
               className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed text-pretty"
@@ -95,27 +92,27 @@ export default function Hero() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex gap-2 items-center justify-center ">
-            <Button size="lg" className=" transition-all duration-500">
-              Profilimi Görüntüle
+          <div className="flex gap-2 items-center justify-center">
+            <Button size="lg" className="transition-all duration-500">
+              <Link href="/projects">{t("ctaProjects")}</Link>
             </Button>
             <Button
               size="lg"
               variant="ghost"
               className="border transition-all duration-500"
             >
-              İletişime Geç
+              <Link href="/contact">{t("ctaContact")}</Link>
             </Button>
           </div>
         </div>
         {/* Image */}
         <div className="md:w-1/2 w-full flex justify-center md:justify-end items-center">
           <Image
-            src="/profile-foto.jpeg"
-            alt="Profile Photo"
+            src="/profile-fotoo.jpg"
+            alt={t("profileAlt")}
             width={450}
             height={450}
-            className="hidden md:block  object-cover   border  rounded-md p-2"
+            className="hidden md:block object-cover border rounded-md p-2"
           />
         </div>
       </section>

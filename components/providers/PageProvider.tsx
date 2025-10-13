@@ -2,7 +2,7 @@ import React from "react";
 
 function PageProvider({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mx-auto max-w-7xl px-6 transition-all duration-300 ">
+    <div className="mx-auto max-w-7xl px-3 md:px-6 transition-all duration-300 ">
       {children}
     </div>
   );

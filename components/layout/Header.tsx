@@ -1,11 +1,10 @@
 "use client";
 import Link from "next/link";
 import { Globe, Menu, X } from "lucide-react";
-
+import { NAV_LINKS } from "@/constant/NavLink";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useScroll } from "motion/react";
-
 import Image from "next/image";
 import { ModeToggle } from "../mode-toggle";
 import { useLocale } from "next-intl";
@@ -17,13 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
-
-const menuItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Solutions", href: "/solutions" },
-  { name: "Contact", href: "/contact" },
-];
+import { useTranslations } from "next-intl";
 
 export const Header = () => {
   const [menuState, setMenuState] = useState(false);
@@ -31,6 +24,7 @@ export const Header = () => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const tNav = useTranslations("NavLinks");
 
   const supportedLocales = [
     { code: "tr", label: "Türkçe" },
@@ -56,8 +50,8 @@ export const Header = () => {
       <nav
         data-state={menuState && "active"}
         className={cn(
-          "fixed z-50  w-full  transition-colors duration-150 ",
-          scrolled && " backdrop-blur-xl"
+          "fixed z-50 w-full transition-colors duration-150",
+          scrolled && "backdrop-blur-xl"
         )}
       >
         <div className="mx-auto max-w-6xl px-6 transition-all duration-300">
@@ -68,8 +62,7 @@ export const Header = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <Image src="/logo.png" alt="logo" width={40} height={40} />
-
+                <Image src="/Logo.png" alt="logo" width={40} height={40} />
                 <span className="text-2xl font-bold text-primary">
                   Berk Certel
                 </span>
@@ -77,7 +70,7 @@ export const Header = () => {
 
               <div className="flex items-center gap-4">
                 {/* Mobile toggle and lang button */}
-                <div className="flex items-center gap-2  lg:hidden">
+                <div className="flex items-center gap-2 lg:hidden">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="outline" size="icon-sm">
@@ -85,7 +78,7 @@ export const Header = () => {
                         <span className="sr-only">Change language</span>
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="max-w-screen" align="end">
+                    <DropdownMenuContent align="end">
                       {supportedLocales.map((lang) => (
                         <DropdownMenuItem
                           key={lang.code}
@@ -104,7 +97,7 @@ export const Header = () => {
                 </div>
                 <button
                   onClick={() => setMenuState(!menuState)}
-                  aria-label={menuState == true ? "Close Menu" : "Open Menu"}
+                  aria-label={menuState ? "Close Menu" : "Open Menu"}
                   className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
                 >
                   <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
@@ -114,19 +107,19 @@ export const Header = () => {
             </div>
             <div className="hidden lg:block">
               <ul className="flex gap-8 text-sm">
-                {menuItems.map((item, index) => (
+                {NAV_LINKS.map((item, index) => (
                   <li key={index}>
                     <Link
                       href={item.href}
                       className={cn(
                         "relative block py-2 font-medium transition-all duration-300",
-                        "text-primary  hover:text-primary",
+                        "text-primary hover:text-primary",
                         "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
-                        "hover:scale-105",
+
                         pathname === item.href && "text-primary after:w-full"
                       )}
                     >
-                      <span className="relative">{item.name}</span>
+                      <span className="relative">{tNav(item.key)}</span>
                     </Link>
                   </li>
                 ))}
@@ -136,7 +129,7 @@ export const Header = () => {
             <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
-                  {menuItems.map((item, index) => (
+                  {NAV_LINKS.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
@@ -148,14 +141,14 @@ export const Header = () => {
                             "text-primary before:opacity-100 before:-left-4"
                         )}
                       >
-                        <span>{item.name}</span>
+                        <span>{tNav(item.key)}</span>
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               {/* Desktop toggle and lang button */}
-              <div className="flex  w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <div className="hidden lg:flex items-center gap-2">
                   <ModeToggle />
                   <DropdownMenu>

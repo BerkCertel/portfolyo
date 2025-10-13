@@ -64,8 +64,10 @@ export default function LogoLoopSection() {
   return (
     <Marquee gradient={false} speed={40} className="py-8">
       {techLogos.map((logo, idx) => (
-        <div key={idx} className="mx-8 flex items-center justify-center">
-          <div className="text-black dark:text-white text-5xl">{logo.node}</div>
+        <div key={idx} className="mx-4 flex items-center justify-center">
+          <div className="text-black dark:text-white text-2xl md:text-4xl">
+            {logo.node}
+          </div>
         </div>
       ))}
     </Marquee>

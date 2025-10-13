@@ -1,113 +1,108 @@
+"use client";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-const links = [
-  {
-    group: "Product",
-    items: [
-      {
-        title: "Features",
-        href: "#",
-      },
-    ],
-  },
-  {
-    group: "Solution",
-    items: [
-      {
-        title: "Startup",
-        href: "#",
-      },
-    ],
-  },
-  {
-    group: "Company",
-    items: [
-      {
-        title: "About",
-        href: "#",
-      },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
+import { NAV_LINKS } from "@/constant/NavLink";
 
-const socialLinks = [
+const CONTACT_INFO = {
+  mail: "m.berkcertel@outlook.com",
+  phone: "+90 546 546 5857",
+};
+
+const SOCIAL_LINKS = [
   {
-    label: "GitHub",
+    key: "github",
     icon: <FaGithub className="size-6" />,
-    url: "https://github.com/BerkCertel", // kendi github url'inle değiştir
+    url: "https://github.com/BerkCertel",
   },
   {
-    label: "Instagram",
-    icon: <FaInstagram className="size-6" />,
-    url: "https://instagram.com/berkcertel", // kendi instagram url'inle değiştir
-  },
-  {
-    label: "LinkedIn",
+    key: "linkedin",
     icon: <FaLinkedin className="size-6" />,
-    url: "https://linkedin.com/in/berkcertel", // kendi linkedin url'inle değiştir
+    url: "https://www.linkedin.com/in/mehmet-berk-certel-38223b254/",
+  },
+  {
+    key: "instagram",
+    icon: <FaInstagram className="size-6" />,
+    url: "https://www.instagram.com/lberkcertel/",
   },
 ];
 
 export default function FooterSection() {
+  const t = useTranslations("Footer");
+  const tNav = useTranslations("NavLinks");
+
   return (
-    <footer className="border-b bg-white pt-10 md:pt-20 dark:bg-transparent border-t ">
-      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-10">
-        <div className="flex flex-col md:flex-row   gap-5 ">
-          <div className="w-full md:w-1/2 flex items-center justify-center md:grid md:grid-cols-1">
+    <footer className="border-b bg-white pt-10 dark:bg-transparent border-t">
+      <div className="mx-auto max-w-7xl pb-5 px-4 md:px-8 lg:px-10">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-center">
+          {/* Logo & Contact Info */}
+          <div className="flex flex-col items-center md:items-start md:w-1/3">
             <Link
               href="/"
               aria-label="go home"
-              className=" size-fit flex justify-center items-center gap-2 font-bold text-2xl text-primary "
+              className="flex items-center gap-2 font-bold text-2xl text-primary"
             >
               <Image
-                src="/logo.png"
+                src="/Logo.png"
                 alt="Logo"
-                width={80}
-                height={80}
+                width={60}
+                height={60}
                 priority
               />
-              <span>Berk Certel</span>
+              <span className="hidden sm:inline">Berk Certel</span>
             </Link>
+            <div className="flex flex-col items-center md:items-start text-xs text-muted-foreground space-y-1">
+              <a
+                href={`mailto:${CONTACT_INFO.mail}`}
+                className="hover:text-primary transition"
+              >
+                {t("mail")}: {CONTACT_INFO.mail}
+              </a>
+              <a
+                href={`tel:${CONTACT_INFO.phone}`}
+                className="hover:text-primary transition"
+              >
+                {t("phone")}: {CONTACT_INFO.phone}
+              </a>
+            </div>
           </div>
 
-          <div className="w-full md:w-1/2 flex justify-between gap-4  ">
-            {links.map((link, index) => (
-              <div key={index} className="space-y-4 text-sm">
-                <span className="block font-medium">{link.group}</span>
-                {link.items.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="text-muted-foreground hover:text-primary block duration-150"
-                  >
-                    <span>{item.title}</span>
-                  </Link>
-                ))}
-              </div>
+          {/* Navigation Links */}
+          <nav className="flex flex-wrap justify-center gap-6 md:w-1/3 my-6 md:my-0">
+            {NAV_LINKS.map(({ key, href }) => (
+              <Link
+                key={key}
+                href={href}
+                className="text-muted-foreground hover:text-primary font-medium px-2 py-1 rounded transition duration-150"
+              >
+                {tNav(key)}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Social Links */}
+          <div className="flex flex-wrap gap-4 md:w-1/3 justify-center md:justify-end">
+            {SOCIAL_LINKS.map((item) => (
+              <a
+                key={item.key}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={t(`social.${item.key}`)}
+                className="text-muted-foreground hover:text-primary block"
+              >
+                {item.icon}
+              </a>
             ))}
           </div>
         </div>
       </div>
-      <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t py-6">
-        <div className="w-full flex items-center justify-between max-w-7xl mx-auto gap-4 px-4 md:px-8 lg:px-10">
-          <span className="text-muted-foreground order-last block text-center text-sm md:order-first">
-            © {new Date().getFullYear()} Berk Certel, All rights reserved.
+      <div className="p-5 border-t">
+        <div className="text-center px-4 md:px-8 lg:px-10 gap-4">
+          <span className="text-muted-foreground text-center text-sm">
+            © {new Date().getFullYear()} Berk Certel, {t("copyright")}
           </span>
-          <div className="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
-            {socialLinks.map((item) => (
-              <Link
-                key={item.label}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={item.label}
-                className="text-muted-foreground hover:text-primary block"
-              >
-                {item.icon}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

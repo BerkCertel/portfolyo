@@ -2,5 +2,269 @@
   "HomePage": {
     "title": "Hello world!",
     "warningText": "Page not found"
+  },
+  "ProjectsPage": {
+    "title": "My Projects",
+    "description": "Below are some of the projects I've worked on or completed. Each project includes information about the technologies used and links related to the project.",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "HotelOrderAppDesc": "QR code based hotel order app. Customers can scan the QR code on their table to access the menu, place orders, and request the bill directly from their smartphones. The app features a user-friendly interface, secure payment options, and real-time order tracking to enhance the dining experience.",
+    "DentwiseDesc": "A comprehensive dental clinic management system with AI and AI voice assistance. It features appointment scheduling, patient records, billing, and real-time notifications to streamline clinic operations.",
+    "ExpenseTrackerDesc": "A comprehensive expense tracking application that helps users manage their finances effectively. It features income and expense tracking, budgeting tools, and insightful financial reports.",
+    "NoteForgeDesc": "A comprehensive note-taking application that helps users organize their thoughts effectively. It features rich text editing, tagging, and powerful search capabilities.",
+    "BasicEcommerceDesc": "A basic e-commerce platform built with the MERN stack, offering a variety of products for online shopping. It features user-friendly navigation, secure Stripe payment options, and a seamless shopping experience. The platform includes an admin panel for managing products, orders, and payments.",
+    "ArzuAmberEcommerceDesc": "A sophisticated e-commerce platform for Arzu Amber, featuring a wide range of products. The platform offers user-friendly navigation, secure payment options, and a seamless shopping experience. It includes an admin panel for managing products, orders, and payments.",
+    "ComingSoon": "Coming Soon..."
+  },
+  "MyServices": {
+    "sectionTitle": "My Services",
+    "sectionDescription": "Explore my custom solutions below.",
+    "items": {
+      "customdev": {
+        "title": "Custom Development",
+        "desc": "I build web, mobile, and backend projects tailored to your needs, offering end-to-end solutions from planning to launch."
+      },
+      "support": {
+        "title": "Technical Support",
+        "desc": "Continuous support and maintenance for your projects, ensuring smooth operation."
+      },
+      "design": {
+        "title": "UX/UI Design",
+        "desc": "Professional interface and user experience design for your brand."
+      },
+      "cloud": {
+        "title": "Cloud Integration",
+        "desc": "Deploy and manage your apps on cloud platforms for scalability and security."
+      },
+      "consulting": {
+        "title": "Technology Consulting",
+        "desc": "I help you choose the best technologies for your business and projects, build software architecture, and manage your digital transformation processes."
+      },
+      "automation": {
+        "title": "Automation Solutions",
+        "desc": "I develop custom automation systems to speed up your business processes and increase efficiency. Save time and costs while streamlining your operations."
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "Get In Touch",
+    "subtitle": "Have a question or want to work together? I'd love to hear from you.",
+    "contactInfoTitle": "Contact Information",
+    "contactInfoEmail": "Email",
+    "contactInfoPhone": "Phone",
+    "followMe": "Contact Me",
+    "contactReasons": {
+      "general": "General Inquiry",
+      "project": "Project Collaboration",
+      "job": "Job Opportunity",
+      "support": "Technical Support",
+      "other": "Other"
+    },
+    "contactReasonPlaceholder": "Select a reason...",
+    "nameLabel": "Name *",
+    "namePlaceholder": "John Doe",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "john@example.com",
+    "phoneLabel": "Phone (Optional)",
+    "phonePlaceholder": "+90 555 123 4567",
+    "reasonLabel": "Contact Reason *",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Tell me about your project or inquiry...",
+    "sendButton": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again."
+  },
+  "WorkingProcess": {
+    "title": "WORKING PROCESS",
+    "subtitle": "Discover my approach to bringing ideas to life. Each step is carefully designed in the process to ensure the success of your project.",
+    "steps": {
+      "analysis": {
+        "title": "Planning & Analysis",
+        "desc": "Before I start a project, I set clear goals, analyze the requirements, and create my own roadmap."
+      },
+      "design": {
+        "title": "Design & Planning",
+        "desc": "I focus on user experience while designing the interface, and I define all the necessary building blocks and resources."
+      },
+      "coding": {
+        "title": "Development & Coding",
+        "desc": "I develop my projects according to the design, always prioritizing functionality and performance during coding."
+      },
+      "testing": {
+        "title": "Testing & Debugging",
+        "desc": "I test my projects at various stages, fix any issues, and make sure everything is reliable and robust."
+      },
+      "deployment": {
+        "title": "Deployment & Progress Tracking",
+        "desc": "I launch my projects, share them with users, and regularly monitor their performance and progress."
+      }
+    }
+  },
+  "NavLinks": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "copyright": "All rights reserved.",
+    "mail": "Email",
+    "phone": "Phone",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
+  },
+  "IcodeWithPage": {
+    "title": "Which Technologies Do I Code With?",
+    "desc": "Below are the technologies I use to build innovative, modern, and efficient projects in my portfolio, categorized for clarity. With each technology, I make software stronger, smarter, and more user-friendly.",
+    "Frontend": "Frontend",
+    "Backend": "Backend",
+    "ORM_Database": "ORM & Database",
+    "Auth_UI": "Auth & UI",
+    "CoreWebTechnologies": "Core Web Technologies",
+    "FrameworksLibrary": "Frameworks / Library",
+    "UILibraries": "UI Libraries",
+    "StateManagementLanguage": "State Management & Language",
+
+    "React": {
+      "title": "React",
+      "desc": "Innovative and component-based web projects."
+    },
+    "Nextjs": {
+      "title": "Next.js",
+      "desc": "Modern framework for server-side rendering and fast development."
+    },
+    "TailwindCSS": {
+      "title": "Tailwind CSS",
+      "desc": "Utility-first CSS for rapid and flexible UI development."
+    },
+    "shadcnui": {
+      "title": "shadcn/ui",
+      "desc": "Advanced and accessible React UI components."
+    },
+    "PrimeReact": {
+      "title": "PrimeReact",
+      "desc": "Comprehensive and powerful React UI component library."
+    },
+    "TypeScript": {
+      "title": "TypeScript",
+      "desc": "Type support for safe and scalable code."
+    },
+    "JavaScript": {
+      "title": "JavaScript",
+      "desc": "Fundamental language for dynamic and interactive user experiences."
+    },
+    "Redux": {
+      "title": "Redux",
+      "desc": "Powerful and popular library for global state management."
+    },
+    "HTML5": {
+      "title": "HTML5",
+      "desc": "The foundation of modern web applications."
+    },
+    "CSS3": {
+      "title": "CSS3",
+      "desc": "Styling and animation for responsive and stylish interfaces."
+    },
+    "Nodejs": {
+      "title": "Node.js",
+      "desc": "High-performance server-side JavaScript."
+    },
+    "Expressjs": {
+      "title": "Express.js",
+      "desc": "Lightweight and fast backend development."
+    },
+    "Drizzle": {
+      "title": "Drizzle",
+      "desc": "Modern ORM for database management."
+    },
+    "Prisma": {
+      "title": "Prisma",
+      "desc": "Type-safe and easy database queries."
+    },
+    "MongoDB": {
+      "title": "MongoDB",
+      "desc": "Flexible data management with a NoSQL database."
+    },
+    "PostgreSQL": {
+      "title": "PostgreSQL",
+      "desc": "Powerful and advanced open-source relational database."
+    },
+    "JWT": {
+      "title": "JWT",
+      "desc": "Secure authentication and session management."
+    },
+    "Clerk": {
+      "title": "Clerk",
+      "desc": "Modern identity management and user sessions."
+    },
+    "BetterAuth": {
+      "title": "Better Auth",
+      "desc": "Modern authentication infrastructure."
+    }
+  },
+  "Hero": {
+    "titles": [
+      "Full-Stack Engineer",
+      "Software Developer",
+      "Frontend Developer",
+      "Backend Developer",
+      "Mobile Developer"
+    ],
+    "greeting": "Hello, I'm",
+    "name": "Berk Certel",
+    "desc": "I am a passionate, innovative, and solution-oriented professional in software development. I love creating impressive digital experiences by leveraging technology.",
+    "ctaProjects": "Check My Projects",
+    "ctaContact": "Contact Me",
+    "profileAlt": "Profile Photo"
+  },
+  "TimelinePage": {
+    "title": "Project Process",
+    "subtitle": "Discover the project process step by step.",
+    "steps": [
+      {
+        "title": "Needs Analysis & Planning",
+        "content": "Before starting the project, I have a detailed meeting with the client/team and clarify the requirements. User stories, goals, and priorities are determined. The work plan and roadmap are created with tools like Trello or Notion."
+      },
+      {
+        "title": "Design & Mockup",
+        "content": "Wireframes and mockups are prepared for the interface. If there is a UI/UX team, I collaborate with them; otherwise, I create basic designs myself using Figma. Color palette, typography, and component structure are determined."
+      },
+      {
+        "title": "Frontend Setup",
+        "content": "At the initial stage, React or Next.js is set up. UI development starts quickly with Tailwind CSS. Component structure and page architecture are planned. UI libraries (shadcn/ui, PrimeReact) are integrated."
+      },
+      {
+        "title": "Backend Setup",
+        "content": "Node.js and Express.js are configured for the server side. API endpoints, middleware, and error management are set up. If necessary, TypeScript is added for type safety."
+      },
+      {
+        "title": "Database & ORM Integration",
+        "content": "MongoDB or PostgreSQL is selected and the data model is designed. Prisma or Drizzle ORM is used for database connection. Migration and seed operations are performed, data relationships are modeled."
+      },
+      {
+        "title": "Authentication & Security",
+        "content": "Authentication systems such as JWT, Clerk, or Better Auth are integrated for user management. Authorization, encryption, and secure session management are ensured."
+      },
+      {
+        "title": "State & Data Management",
+        "content": "Global state management is created with Redux or context API. Appropriate structures are established for API calls, data caching, and asynchronous operations."
+      },
+      {
+        "title": "Test & Quality Assurance",
+        "content": "Unit and integration tests are written using tools like Jest and React Testing Library. The stability and security of the application are checked with manual and automated tests."
+      },
+      {
+        "title": "Deploy & Versioning",
+        "content": "When the project is complete, deployment is performed on Vercel, Netlify, or my own server. Git and GitHub are used for version control; CI/CD processes are integrated if available."
+      },
+      {
+        "title": "Documentation & Delivery",
+        "content": "In the final stage, README, API documentation, and user guides are prepared for the project. The project is delivered to the client/team, and the feedback phase is started."
+      }
+    ]
   }
 }

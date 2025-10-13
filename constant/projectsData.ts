@@ -1,0 +1,107 @@
+const ComingSoonImageUrl =
+  "https://res.cloudinary.com/dgoothqal/image/upload/v1760370083/coming-soon_pz6353.jpg";
+
+export const projectsData = [
+  {
+    id: 1,
+    name: "Hotel Order App",
+    descriptionKey: "HotelOrderAppDesc",
+    images: [
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760367800/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_180209_bvj88n.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760367803/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_180302_gywcxb.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760367800/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_180243_p7wqbw.png`,
+    ],
+    githubUrl: "https://github.com/BerkCertel/dentwise",
+    demoStatus: false,
+    demoUrl: "https://github.com/yourusername/ecommerce-platform",
+  },
+  {
+    id: 2,
+    name: "Dentwise",
+    descriptionKey: "DentwiseDesc",
+    images: [
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366667/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_163654_orfpam.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366689/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_163709_cbhwqx.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366833/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_163726_nlgstt.png`,
+    ],
+    githubUrl: "https://github.com/BerkCertel/dentwise",
+    demoStatus: false,
+    demoUrl: "https://github.com/yourusername/ecommerce-platform",
+  },
+  {
+    id: 3,
+    descriptionKey: "ExpenseTrackerDesc",
+    description:
+      "A comprehensive expense tracking application that helps users manage their finances effectively. It features income and expense tracking, budgeting tools, and insightful financial reports.",
+    images: [
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366650/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_164028_sy9yrw.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366649/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_164233_wuv2td.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366645/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_164246_vuerjj.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366640/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_164254_upqal7.png`,
+    ],
+    githubUrl: "https://github.com/BerkCertel/expense-tracker",
+    demoStatus: true,
+    demoUrl: "https://github.com/yourusername/ecommerce-platform",
+  },
+  {
+    id: 4,
+    name: "Note Forge",
+    descriptionKey: "NoteForgeDesc",
+    images: [
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366666/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_163839_wnz3ju.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366652/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_163911_cvebpr.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366663/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_163857_ohtlh7.png`,
+    ],
+    githubUrl: "https://github.com/BerkCertel/note-app",
+    demoStatus: true,
+    demoUrl: "https://github.com/yourusername/ecommerce-platform",
+  },
+  {
+    id: 5,
+    name: "Basic E-commerce",
+    descriptionKey: "BasicEcommerceDesc",
+    images: [
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760368168/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_180758_hp3omw.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760368167/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_180826_m9prtn.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760368168/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_180847_sfao3v.png`,
+    ],
+    githubUrlStatus: true,
+    githubUrl: "https://github.com/BerkCertel/E-Commerce-React-MongoDB",
+    demoStatus: false,
+    demoUrl: "https://arzuamber.com/tr",
+  },
+  {
+    id: 6,
+    name: "Arzu Amber E-commerce",
+    descriptionKey: "ArzuAmberEcommerceDesc",
+    images: [
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366844/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_174453_tuxxi1.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366845/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_174605_s1rmp8.png`,
+      `${process.env.NEXT_PUBLIC_IMAGES_BASE_URL}v1760366663/Ekran_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC_2025-10-13_163857_ohtlh7.png`,
+    ],
+    githubUrlStatus: false,
+    githubUrl: "https://github.com/BerkCertel/dentwise",
+    demoStatus: true,
+    demoUrl: "https://arzuamber.com/tr",
+  },
+  {
+    id: 7,
+    name: "Yakında Gelecek.../Coming Soon...",
+    descriptionKey: "ComingSoon",
+    images: [ComingSoonImageUrl],
+    githubUrlStatus: false,
+    githubUrl: "https://github.com/BerkCertel/",
+    demoStatus: false,
+    demoUrl: "https://berkcertel.com/tr",
+  },
+  {
+    id: 8,
+    name: "Yakında Gelecek.../Coming Soon...",
+    descriptionKey: "ComingSoon",
+    images: [ComingSoonImageUrl],
+    githubUrlStatus: false,
+    githubUrl: "https://github.com/BerkCertel/",
+    demoStatus: false,
+    demoUrl: "https://berkcertel.com/tr",
+  },
+];

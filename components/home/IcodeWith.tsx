@@ -26,127 +26,128 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { useTheme } from "next-themes";
 import LogoLoopSection from "./LogoLoopSection";
 import BlurText from "../BlurText";
-
-// Frontend alt başlıklarıyla sıralanmış
-const frontendFrameworks = [
-  {
-    node: <SiReact />,
-    title: "React",
-    description: "Yenilikçi ve component tabanlı web projeleri.",
-  },
-  {
-    node: <SiNextdotjs />,
-    title: "Next.js",
-    description:
-      "Sunucu tarafı render ve hızlı geliştirme için modern framework.",
-  },
-];
-
-const frontendUI = [
-  {
-    node: <SiTailwindcss />,
-    title: "Tailwind CSS",
-    description: "Hızlı ve esnek UI geliştirme için utility-first CSS.",
-  },
-  {
-    node: <SiShadcnui />,
-    title: "shadcn/ui",
-    description: "Gelişmiş ve erişilebilir React UI bileşenleri.",
-  },
-  {
-    node: <SiPrimereact />,
-    title: "PrimeReact",
-    description: "Kapsamlı ve güçlü React UI component kütüphanesi.",
-  },
-];
-
-const frontendState = [
-  {
-    node: <SiTypescript />,
-    title: "TypeScript",
-    description: "Güvenli ve ölçeklenebilir kod için tip desteği.",
-  },
-  {
-    node: <SiJavascript />,
-    title: "JavaScript",
-    description: "Dinamik ve interaktif kullanıcı deneyimi için temel dil.",
-  },
-  {
-    node: <SiRedux />,
-    title: "Redux",
-    description: "Global state yönetimi için güçlü ve popüler bir kütüphane.",
-  },
-];
-
-const frontendCore = [
-  {
-    node: <SiHtml5 />,
-    title: "HTML5",
-    description: "Modern web uygulamalarının temel yapı taşı.",
-  },
-  {
-    node: <SiCss3 />,
-    title: "CSS3",
-    description: "Duyarlı ve şık arayüzler için stil ve animasyon.",
-  },
-];
-
-// Backend
-const backendTech = [
-  {
-    node: <FaNode />,
-    title: "Node.js",
-    description: "Yüksek performanslı sunucu tarafı JavaScript.",
-  },
-  {
-    node: <SiExpress />,
-    title: "Express.js",
-    description: "Hafif ve hızlı backend geliştirme.",
-  },
-];
-
-// ORM & Database
-const ormDatabaseTech = [
-  {
-    node: <SiDrizzle />,
-    title: "Drizzle",
-    description: "Veritabanı yönetimi için modern ORM.",
-  },
-  {
-    node: <SiPrisma />,
-    title: "Prisma",
-    description: "Tip güvenli ve kolay veritabanı sorguları.",
-  },
-  {
-    node: <SiMongodb />,
-    title: "MongoDB",
-    description: "NoSQL veritabanı ile esnek veri yönetimi.",
-  },
-  {
-    node: <BiLogoPostgresql />,
-    title: "PostgreSQL",
-    description: "Güçlü ve gelişmiş açık kaynaklı ilişkisel veritabanı.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function IcodeWith() {
   const [mounted, setMounted] = React.useState(false);
   const { theme } = useTheme();
+  const t = useTranslations("IcodeWithPage"); // <--- Kategoriyle kullan!
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
+  // Frontend alt başlıklarıyla sıralanmış
+  const frontendFrameworks = [
+    {
+      node: <SiReact />,
+      title: t("React.title"),
+      description: t("React.desc"),
+    },
+    {
+      node: <SiNextdotjs />,
+      title: t("Nextjs.title"),
+      description: t("Nextjs.desc"),
+    },
+  ];
+
+  const frontendUI = [
+    {
+      node: <SiTailwindcss />,
+      title: t("TailwindCSS.title"),
+      description: t("TailwindCSS.desc"),
+    },
+    {
+      node: <SiShadcnui />,
+      title: t("shadcnui.title"),
+      description: t("shadcnui.desc"),
+    },
+    {
+      node: <SiPrimereact />,
+      title: t("PrimeReact.title"),
+      description: t("PrimeReact.desc"),
+    },
+  ];
+
+  const frontendState = [
+    {
+      node: <SiTypescript />,
+      title: t("TypeScript.title"),
+      description: t("TypeScript.desc"),
+    },
+    {
+      node: <SiJavascript />,
+      title: t("JavaScript.title"),
+      description: t("JavaScript.desc"),
+    },
+    {
+      node: <SiRedux />,
+      title: t("Redux.title"),
+      description: t("Redux.desc"),
+    },
+  ];
+
+  const frontendCore = [
+    {
+      node: <SiHtml5 />,
+      title: t("HTML5.title"),
+      description: t("HTML5.desc"),
+    },
+    {
+      node: <SiCss3 />,
+      title: t("CSS3.title"),
+      description: t("CSS3.desc"),
+    },
+  ];
+
+  // Backend
+  const backendTech = [
+    {
+      node: <FaNode />,
+      title: t("Nodejs.title"),
+      description: t("Nodejs.desc"),
+    },
+    {
+      node: <SiExpress />,
+      title: t("Expressjs.title"),
+      description: t("Expressjs.desc"),
+    },
+  ];
+
+  // ORM & Database
+  const ormDatabaseTech = [
+    {
+      node: <SiDrizzle />,
+      title: t("Drizzle.title"),
+      description: t("Drizzle.desc"),
+    },
+    {
+      node: <SiPrisma />,
+      title: t("Prisma.title"),
+      description: t("Prisma.desc"),
+    },
+    {
+      node: <SiMongodb />,
+      title: t("MongoDB.title"),
+      description: t("MongoDB.desc"),
+    },
+    {
+      node: <BiLogoPostgresql />,
+      title: t("PostgreSQL.title"),
+      description: t("PostgreSQL.desc"),
+    },
+  ];
+
   const authUiTech = [
     {
       node: <SiJsonwebtokens />,
-      title: "JWT",
-      description: "Güvenli kimlik doğrulama ve oturum yönetimi.",
+      title: t("JWT.title"),
+      description: t("JWT.desc"),
     },
     {
       node: <SiClerk />,
-      title: "Clerk",
-      description: "Modern kimlik yönetimi ve kullanıcı oturumları.",
+      title: t("Clerk.title"),
+      description: t("Clerk.desc"),
     },
     {
       node: mounted ? (
@@ -156,7 +157,7 @@ export default function IcodeWith() {
               ? "/better-auth-logo.png"
               : "/better-auth-logo-light.png"
           }
-          alt="Better Auth"
+          alt={t("BetterAuth.title")}
           height={34}
           width={34}
           className="object-contain"
@@ -164,8 +165,8 @@ export default function IcodeWith() {
       ) : (
         <div className="size-[34px]" />
       ),
-      title: "Better Auth",
-      description: "Modern kimlik doğrulama altyapısı.",
+      title: t("BetterAuth.title"),
+      description: t("BetterAuth.desc"),
     },
   ];
 
@@ -176,7 +177,7 @@ export default function IcodeWith() {
           <div className="flex flex-col items-center justify-center py-10 bg-background">
             <div className="w-full  text-center px-4">
               <BlurText
-                text="Hangi Teknolojilerle Kodluyorum?"
+                text={t("title")}
                 delay={150}
                 animateBy="words"
                 direction="top"
@@ -184,7 +185,7 @@ export default function IcodeWith() {
               />
 
               <BlurText
-                text="Portfolyomda yenilikçi, modern ve verimli projeler geliştirirken kullandığım teknolojiler aşağıda kategorilere ayrılmış şekilde yer alıyor. Her bir teknolojiyle yazılımı daha güçlü, daha akıllı ve kullanıcı dostu bir hale getiriyorum."
+                text={t("desc")}
                 delay={100}
                 animateBy="words"
                 direction="top"
@@ -196,31 +197,34 @@ export default function IcodeWith() {
             <LogoLoopSection />
           </div>
           <div className="flex flex-col gap-6 lg:gap-8">
-            <TechSection title="Frontend">
+            <TechSection title={t("Frontend")}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <TechSubSection
-                  title="Core Web Technologies"
+                  title={t("CoreWebTechnologies")}
                   techList={frontendCore}
                 />
                 <TechSubSection
-                  title="Frameworks / Library"
+                  title={t("FrameworksLibrary")}
                   techList={frontendFrameworks}
                 />
-                <TechSubSection title="UI Libraries" techList={frontendUI} />
                 <TechSubSection
-                  title="State Management & Language"
+                  title={t("UILibraries")}
+                  techList={frontendUI}
+                />
+                <TechSubSection
+                  title={t("StateManagementLanguage")}
                   techList={frontendState}
                 />
               </div>
             </TechSection>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <TechSection title="Backend">
+              <TechSection title={t("Backend")}>
                 <TechSubSection techList={backendTech} />
               </TechSection>
-              <TechSection title="ORM & Database">
+              <TechSection title={t("ORM_Database")}>
                 <TechSubSection techList={ormDatabaseTech} />
               </TechSection>
-              <TechSection title="Auth & UI">
+              <TechSection title={t("Auth_UI")}>
                 <TechSubSection techList={authUiTech} />
               </TechSection>
             </div>

@@ -2,5 +2,269 @@
   "HomePage": {
     "title": "Merhaba dünya!",
     "warningText": "Sayfa bulunamadı"
+  },
+  "ProjectsPage": {
+    "title": "Projelerim",
+    "description": "Aşağıda, üzerinde çalıştığım veya tamamladığım bazı projeleri bulabilirsiniz. Her proje, kullanılan teknolojiler ve projeye ait bağlantılar hakkında bilgiler içermektedir.",
+    "viewCode": "Kodu Görüntüle",
+    "liveDemo": "Canlı Demo",
+    "HotelOrderAppDesc": "Qr kod tabanlı otel sipariş uygulaması. Müşteriler, masalarındaki QR kodunu tarayarak menüye erişebilir, sipariş verebilir ve doğrudan akıllı telefonlarından fatura talep edebilirler. Uygulama, kullanıcı dostu bir arayüz, güvenli ödeme seçenekleri ve yemek deneyimini geliştirmek için gerçek zamanlı sipariş takibi sunmaktadır.",
+    "DentwiseDesc": "Yapay zeka ve sesli asistan destekli kapsamlı bir diş kliniği yönetim sistemi. Randevu planlama, hasta kayıtları, faturalandırma ve anlık bildirimlerle klinik operasyonlarını kolaylaştırır.",
+    "ExpenseTrackerDesc": "Kapsamlı bir harcama takip uygulaması. Gelir-gider takibi, bütçeleme araçları ve detaylı finansal raporlar ile kullanıcıların mali durumunu etkin şekilde yönetmesini sağlar.",
+    "NoteForgeDesc": "Düşüncelerinizi etkili şekilde organize etmenize yardımcı olan kapsamlı bir not alma uygulaması. Zengin metin düzenleme, etiketleme ve güçlü arama özellikleri sunar.",
+    "BasicEcommerceDesc": "MERN stack ile geliştirilmiş temel bir e-ticaret platformu. Kullanıcı dostu gezinme, güvenli Stripe ödeme seçenekleri ve sorunsuz alışveriş deneyimi sunar. Ürün, sipariş ve ödeme yönetimi için admin paneli içerir.",
+    "ArzuAmberEcommerceDesc": "Arzu Amber için geliştirilmiş gelişmiş bir e-ticaret platformu. Kullanıcı dostu gezinme, güvenli ödeme seçenekleri ve sorunsuz alışveriş imkanı sunar. Ürün, sipariş ve ödeme yönetimi için admin paneli içerir.",
+    "ComingSoon": "Yakında Gelecek..."
+  },
+  "MyServices": {
+    "sectionTitle": "Hizmetlerim",
+    "sectionDescription": "Aşağıda size özel çözümlerimi keşfedin. ",
+    "items": {
+      "customdev": {
+        "title": "Özel Yazılım Geliştirme",
+        "desc": "Web, mobil ve backend projelerinizi, iş hedeflerinize ve beklentilerinize tam uyumlu şekilde tasarlıyor ve geliştiriyorum. Proje analizinden uygulama geliştirmeye, test ve bakım süreçlerine kadar her aşamada profesyonel destek sunarak, size özel yazılım çözümleri üretiyorum."
+      },
+      "support": {
+        "title": "Teknik Destek",
+        "desc": "Projelerinizin sorunsuz çalışmasını sağlamak için sürekli destek ve bakım."
+      },
+      "design": {
+        "title": "UX/UI Tasarımı",
+        "desc": "Markanız için profesyonel arayüz ve kullanıcı deneyimi tasarımı."
+      },
+      "automation": {
+        "title": "Otomasyon Çözümleri",
+        "desc": "İş süreçlerinizi hızlandırmak ve verimliliği artırmak için özel otomasyon sistemleri geliştiriyorum. Zamandan ve maliyetten tasarruf edin, operasyonlarınızı kolaylaştırın."
+      },
+      "consulting": {
+        "title": "Teknoloji Danışmanlığı",
+        "desc": "İşiniz ve projeleriniz için en uygun teknolojileri seçmenize, yazılım mimarisi oluşturmanıza ve dijital dönüşüm süreçlerinizi yönetmenize destek oluyorum."
+      },
+      "cloud": {
+        "title": "Bulut Entegrasyonu",
+        "desc": "Uygulamalarınızı ölçeklenebilir ve güvenli bulut platformlarında dağıtın ve yönetin."
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "İletişime Geçin",
+    "subtitle": "Bir sorunuz mu var veya birlikte çalışmak mı istiyorsunuz? Sizden haber almak isterim.",
+    "contactInfoTitle": "İletişim Bilgileri",
+    "contactInfoEmail": "E-posta",
+    "contactInfoPhone": "Telefon",
+    "followMe": "Bana Ulaşın",
+    "contactReasons": {
+      "general": "Genel Soru",
+      "project": "Proje İşbirliği",
+      "job": "İş Fırsatı",
+      "support": "Teknik Destek",
+      "other": "Diğer"
+    },
+    "contactReasonPlaceholder": "Bir neden seçin...",
+    "nameLabel": "İsim *",
+    "namePlaceholder": "***",
+    "emailLabel": "E-posta *",
+    "emailPlaceholder": "@example.com",
+    "phoneLabel": "Telefon (Opsiyonel)",
+    "phonePlaceholder": "+90 555 123 4567",
+    "reasonLabel": "İletişim Nedeni *",
+    "messageLabel": "Mesaj *",
+    "messagePlaceholder": "Projeniz veya talebiniz hakkında bilgi verin...",
+    "sendButton": "Mesaj Gönder",
+    "success": "Mesaj başarıyla gönderildi!",
+    "error": "Mesaj gönderilemedi. Lütfen tekrar deneyin."
+  },
+  "WorkingProcess": {
+    "title": "ÇALIŞMA SÜRECİ",
+    "subtitle": "Fikirlerinizi hayata geçirirken izlediğim yaklaşımı keşfedin. Her adım, projenizin başarısını sağlamak için özenle tasarlandı.",
+    "steps": {
+      "analysis": {
+        "title": "Planlama ve Analiz",
+        "desc": "Projeye başlamadan önce hedeflerimi netleştiriyor, ihtiyaçları analiz ediyor ve yol haritamı oluşturuyorum."
+      },
+      "design": {
+        "title": "Tasarım ve Planlama",
+        "desc": "Kullanıcı deneyimini ön planda tutarak arayüzü tasarlıyor, gerekli kaynakları ve yapı taşlarını belirliyorum."
+      },
+      "coding": {
+        "title": "Geliştirme ve Kodlama",
+        "desc": "Tasarıma uygun şekilde projeyi geliştiriyor, kodlama sürecinde işlevselliği ve performansı önemsiyorum."
+      },
+      "testing": {
+        "title": "Test ve Hata Ayıklama",
+        "desc": "Projeyi çeşitli aşamalarda test ederek, karşılaşılan hataları düzeltiyor ve güvenilirliği artırıyorum."
+      },
+      "deployment": {
+        "title": "Yayınlama ve İlerleme Takibi",
+        "desc": "Projeyi yayına alıyor, kullanıcılarla buluşturuyor ve performansını düzenli olarak takip ediyorum."
+      }
+    }
+  },
+  "NavLinks": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "services": "Hizmetler",
+    "contact": "İletişim"
+  },
+  "Footer": {
+    "copyright": "Tüm hakları saklıdır.",
+    "mail": "E-posta",
+    "phone": "Telefon",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
+  },
+  "IcodeWithPage": {
+    "title": "Hangi Teknolojilerle Kodluyorum?",
+    "desc": "Portfolyomda yenilikçi, modern ve verimli projeler geliştirirken kullandığım teknolojiler aşağıda kategorilere ayrılmış şekilde yer alıyor. Her bir teknolojiyle yazılımı daha güçlü, daha akıllı ve kullanıcı dostu bir hale getiriyorum.",
+    "Frontend": "Frontend",
+    "Backend": "Backend",
+    "ORM_Database": "ORM & Database",
+    "Auth_UI": "Auth & UI",
+    "CoreWebTechnologies": "Core Web Teknolojileri",
+    "FrameworksLibrary": "Framework / Kütüphane",
+    "UILibraries": "UI Kütüphaneleri",
+    "StateManagementLanguage": "State Yönetimi & Dil",
+
+    "React": {
+      "title": "React",
+      "desc": "Yenilikçi ve component tabanlı web projeleri."
+    },
+    "Nextjs": {
+      "title": "Next.js",
+      "desc": "Sunucu tarafı render ve hızlı geliştirme için modern framework."
+    },
+    "TailwindCSS": {
+      "title": "Tailwind CSS",
+      "desc": "Hızlı ve esnek UI geliştirme için utility-first CSS."
+    },
+    "shadcnui": {
+      "title": "shadcn/ui",
+      "desc": "Gelişmiş ve erişilebilir React UI bileşenleri."
+    },
+    "PrimeReact": {
+      "title": "PrimeReact",
+      "desc": "Kapsamlı ve güçlü React UI component kütüphanesi."
+    },
+    "TypeScript": {
+      "title": "TypeScript",
+      "desc": "Güvenli ve ölçeklenebilir kod için tip desteği."
+    },
+    "JavaScript": {
+      "title": "JavaScript",
+      "desc": "Dinamik ve interaktif kullanıcı deneyimi için temel dil."
+    },
+    "Redux": {
+      "title": "Redux",
+      "desc": "Global state yönetimi için güçlü ve popüler bir kütüphane."
+    },
+    "HTML5": {
+      "title": "HTML5",
+      "desc": "Modern web uygulamalarının temel yapı taşı."
+    },
+    "CSS3": {
+      "title": "CSS3",
+      "desc": "Duyarlı ve şık arayüzler için stil ve animasyon."
+    },
+    "Nodejs": {
+      "title": "Node.js",
+      "desc": "Yüksek performanslı sunucu tarafı JavaScript."
+    },
+    "Expressjs": {
+      "title": "Express.js",
+      "desc": "Hafif ve hızlı backend geliştirme."
+    },
+    "Drizzle": {
+      "title": "Drizzle",
+      "desc": "Veritabanı yönetimi için modern ORM."
+    },
+    "Prisma": {
+      "title": "Prisma",
+      "desc": "Tip güvenli ve kolay veritabanı sorguları."
+    },
+    "MongoDB": {
+      "title": "MongoDB",
+      "desc": "NoSQL veritabanı ile esnek veri yönetimi."
+    },
+    "PostgreSQL": {
+      "title": "PostgreSQL",
+      "desc": "Güçlü ve gelişmiş açık kaynaklı ilişkisel veritabanı."
+    },
+    "JWT": {
+      "title": "JWT",
+      "desc": "Güvenli kimlik doğrulama ve oturum yönetimi."
+    },
+    "Clerk": {
+      "title": "Clerk",
+      "desc": "Modern kimlik yönetimi ve kullanıcı oturumları."
+    },
+    "BetterAuth": {
+      "title": "Better Auth",
+      "desc": "Modern kimlik doğrulama altyapısı."
+    }
+  },
+  "Hero": {
+    "titles": [
+      "Full-Stack Mühendis",
+      "Yazılım Geliştirici",
+      "Frontend Geliştirici",
+      "Backend Geliştirici",
+      "Mobil Geliştirici"
+    ],
+    "greeting": "Merhaba, ben",
+    "name": "Berk Certel",
+    "desc": "Yazılım geliştirme konusunda tutkulu, yenilikçi ve çözüm odaklı bir profesyonelim. Teknolojiyi kullanarak etkileyici dijital deneyimler yaratmayı seviyorum.",
+    "ctaProjects": "Projelerime Göz At",
+    "ctaContact": "İletişime Geç",
+    "profileAlt": "Profil Fotoğrafı"
+  },
+  "TimelinePage": {
+    "title": "Proje Süreci",
+    "subtitle": "Adım adım proje sürecini keşfedin.",
+    "steps": [
+      {
+        "title": "İhtiyaç Analizi & Planlama",
+        "content": "Proje başlamadan önce müşteri/ekip ile detaylı bir görüşme yaparım ve proje gereksinimlerini netleştiririm. Kullanıcı hikayeleri, hedefler ve öncelikler belirlenir. Trello, Notion gibi araçlarla iş planı ve yol haritası çıkarılır."
+      },
+      {
+        "title": "Tasarım & Mockup",
+        "content": "Arayüz için Wireframe ve Mockup hazırlanır. Eğer varsa UI/UX ekibiyle iş birliği yapılır, yoksa Figma ile temel tasarımı kendim oluştururum. Renk paleti, tipografi ve component yapısı belirlenir."
+      },
+      {
+        "title": "Frontend Kurulumu",
+        "content": "Projenin ilk adımında React veya Next.js kurulumu yapılır. Tailwind CSS ile hızlı arayüz geliştirme başlar. Component yapısı ve sayfa mimarisi planlanır. UI kütüphaneleri (shadcn/ui, PrimeReact) entegre edilir."
+      },
+      {
+        "title": "Backend Kurulumu",
+        "content": "Sunucu tarafı için Node.js ve Express.js yapılandırılır. API endpointleri, middleware ve hata yönetimi kurulur. Gerekirse TypeScript ile tip desteği eklenir."
+      },
+      {
+        "title": "Veritabanı & ORM Entegrasyonu",
+        "content": "MongoDB veya PostgreSQL seçilerek veri modeli tasarlanır. Prisma veya Drizzle ORM ile veritabanı bağlantısı kurulur. Migration ve seed işlemleri yapılır, veri ilişkileri modellenir."
+      },
+      {
+        "title": "Kimlik Doğrulama & Güvenlik",
+        "content": "Kullanıcı yönetimi için JWT, Clerk veya Better Auth gibi kimlik doğrulama sistemleri entegre edilir. Yetkilendirme, şifreleme ve güvenli oturum yönetimi sağlanır."
+      },
+      {
+        "title": "State & Veri Yönetimi",
+        "content": "Redux veya context API ile global state yönetimi oluşturulur. API çağrıları, veri önbellekleme ve asenkron işlemler için uygun yapılar kurulur."
+      },
+      {
+        "title": "Test & Kalite Kontrol",
+        "content": "Jest, React Testing Library gibi araçlarla birim ve entegrasyon testleri yazılır. Manuel ve otomatik testlerle uygulamanın kararlılığı ve güvenliği kontrol edilir."
+      },
+      {
+        "title": "Deploy & Sürümleme",
+        "content": "Proje tamamlandığında Vercel, Netlify veya kendi sunucuma deployment yaparım. Sürüm yönetimi için Git ve GitHub kullanılır, CI/CD süreçleri varsa entegre edilir."
+      },
+      {
+        "title": "Dökümantasyon & Teslim",
+        "content": "Son aşamada proje için README, API dökümantasyonu, kullanım kılavuzları hazırlanır. Müşteriye/ekibe teslim edilir ve geri bildirim aşaması başlatılır."
+      }
+    ]
   }
 }
