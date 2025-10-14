@@ -41,7 +41,7 @@ export const projectsData = [
     ],
     githubUrl: "https://github.com/BerkCertel/expense-tracker",
     demoStatus: true,
-    demoUrl: "https://github.com/yourusername/ecommerce-platform",
+    demoUrl: "https://expense-tracker-ten-chi-84.vercel.app/",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const projectsData = [
     ],
     githubUrl: "https://github.com/BerkCertel/note-app",
     demoStatus: true,
-    demoUrl: "https://github.com/yourusername/ecommerce-platform",
+    demoUrl: "https://noteforgeapp.netlify.app/",
   },
   {
     id: 5,

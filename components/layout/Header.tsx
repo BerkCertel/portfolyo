@@ -62,7 +62,7 @@ export const Header = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <Image src="/Logo.png" alt="logo" width={40} height={40} />
+                <Image src="/NewLogo.png" alt="logo" width={40} height={40} />
                 <span className="text-2xl font-bold text-primary">
                   Berk Certel
                 </span>

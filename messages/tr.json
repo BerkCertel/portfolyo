@@ -266,5 +266,25 @@
         "content": "Son aşamada proje için README, API dökümantasyonu, kullanım kılavuzları hazırlanır. Müşteriye/ekibe teslim edilir ve geri bildirim aşaması başlatılır."
       }
     ]
-  }
+  },
+  "AboutPage": {
+    "name": "Berk Certel",
+    "title": "Full Stack Developer",
+    "bio": "Antalya'da yaşayan bir Full Stack Developer olarak, güçlü ve ölçeklenebilir web uygulamaları geliştirme konusunda uzmanım. Yazılım  yolculuğum iki farklı üniversitede aldığım eğitimlerle temellendi. Modern teknolojilerle kaliteli çözümler üretmeye odaklanıyor, karmaşık fikirleri kullanıcı dostu dijital deneyimlere dönüştürüyorum.",
+    "educationTitle": "Eğitim",
+    "education": [
+      {
+        "degree": "Bilgisayar Programcılığı",
+        "school": "Antalya Bilim Üniversitesi",
+        "period": "2022 - 2024"
+      },
+      {
+        "degree": "İlk Ve Acil Yardım Teknikerliğ (Paramedik)",
+        "school": "Akdeniz Üniversitesi",
+        "period": "2018 - 2020"
+      }
+    ]
+  },
+  "sectionTitle": "Ben Kimim?",
+  "aboutMe": "Antalya'da yaşayan bir Full Stack Developer'ım. Modern ve ölçeklenebilir web uygulamaları geliştiriyorum."
 }

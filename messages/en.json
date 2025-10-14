@@ -266,5 +266,25 @@
         "content": "In the final stage, README, API documentation, and user guides are prepared for the project. The project is delivered to the client/team, and the feedback phase is started."
       }
     ]
-  }
+  },
+  "AboutPage": {
+    "name": "Berk Certel",
+    "title": "Full Stack Developer",
+    "bio": "I am a Full Stack Developer based in Antalya, passionate about crafting robust and scalable web applications. My journey spans two universities in Computer Programming, where I built a strong foundation in modern technologies. I focus on delivering high-quality solutions and enjoy turning complex ideas into seamless digital experiences.",
+    "educationTitle": "Education",
+    "education": [
+      {
+        "degree": "Computer Programming",
+        "school": "Antalya Bilim University",
+        "period": "2022 - 2024"
+      },
+      {
+        "degree": "Emergency Medical Technician (Paramedic)",
+        "school": "Akdeniz University",
+        "period": "2018 - 2020"
+      }
+    ]
+  },
+  "sectionTitle": "Who Am I?",
+  "aboutMe": "I'm a Full Stack Developer living in Antalya. I specialize in building modern and scalable web applications."
 }

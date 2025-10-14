@@ -44,7 +44,7 @@ export default function FooterSection() {
               className="flex items-center gap-2 font-bold text-2xl text-primary"
             >
               <Image
-                src="/Logo.png"
+                src="/NewLogo.png"
                 alt="Logo"
                 width={60}
                 height={60}

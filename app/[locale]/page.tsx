@@ -4,6 +4,7 @@ import DarkVeil from "@/components/background/DarkVeil";
 import Hero from "@/components/home/Hero";
 import IcodeWith from "@/components/home/IcodeWith";
 import ScrollArrow from "@/components/home/ScrollArrow";
+import WhoAmI from "@/components/home/WhoAmI";
 import MyServices from "@/components/MyServices/MyServicesSection";
 import WorkingProcess from "@/components/MyServices/WorkingProcess";
 import PageProvider from "@/components/providers/PageProvider";
@@ -58,6 +59,7 @@ export default function Home() {
         </div>
       </div>
       <PageProvider>
+        <WhoAmI />
         <div className="hidden md:block">
           <MyServices />
         </div>
