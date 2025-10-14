@@ -29,7 +29,7 @@ export default function ProjectsImageSlider({ images }: { images: string[] }) {
         <Image
           src={images[currentIndex] || "/placeholder.svg"}
           alt={`Project screenshot ${currentIndex + 1}`}
-          className="w-full h-full object-cover transition-opacity duration-300"
+          className="w-full h-full object-cover transition-opacity duration-300 border-b"
           fill
           sizes="(max-width: 768px) 100vw, (min-width: 768px) 50vw, 33vw"
         />
